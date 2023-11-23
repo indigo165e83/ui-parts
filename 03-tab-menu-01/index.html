@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./resources/styles/destyle.css" />
+    <link rel="stylesheet" href="./resources/styles/style.css" />
+  </head>
+  <body>
+    <header class="Header">
+      <div class="Logo">
+        <a href="../index.html">
+          <img src="../resources/images/ui-parts-logo.png" width="150px" height="80px" alt="">
+        </a>
+      </div>
+      <div class="Title">
+        <h1>頻出UIパーツ</h1>
+      </div>
+    </header>
+    <div class="TabMenu">
+      <ul class="Tabs">
+        <li data-id="Content1" class="Tab TabIsActive">タブ1</li>
+        <li data-id="Content2" class="Tab">タブ2</li>
+        <li data-id="Content3" class="Tab">タブ3</li>
+      </ul>
+      <ul class="Contents">
+        <li id="Content1" class="Content ContentIsActive">
+          1番目のコンテンツ
+        </li>
+        <li id="Content2" class="Content">2番目のコンテンツ</li>
+        <li id="Content3" class="Content">3番目のコンテンツ</li>
+      </ul>
+    </div>
+    <script>
+      const tabs = document.querySelectorAll(".Tab")
+      const contents = document.querySelectorAll(".Content")
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", toggleTab)
+      })
+
+      function toggleTab(event) {
+        tabs.forEach((tab) => tab.classList.remove("TabIsActive"))
+        contents.forEach((content) =>
+          content.classList.remove("ContentIsActive")
+        )
+
+        const clickedTab = event.currentTarget
+        clickedTab.classList.add("TabIsActive")
+
+        const targetContent = document.getElementById(clickedTab.dataset.id)
+        targetContent.classList.add("ContentIsActive")
+      }
+    </script>
+  </body>
+</html>

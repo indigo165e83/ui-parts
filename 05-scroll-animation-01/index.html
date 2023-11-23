@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./resources/styles/destyle.css" />
+    <link rel="stylesheet" href="./resources/styles/style.css" />
+  </head>
+  <body>
+    <header class="Header">
+      <div class="Logo">
+        <a href="../index.html">
+          <img src="../resources/images/ui-parts-logo.png" width="150px" height="80px" alt="">
+        </a>
+      </div>
+      <div class="Title">
+        <h1>頻出UIパーツ</h1>
+      </div>
+    </header>
+    <section class="FirstView">ファーストビューです</section>
+    <main class="Main">
+      <section class="Section"></section>
+      <section class="Section"></section>
+      <section class="Section"></section>
+      <section class="Section"></section>
+      <section class="Section"></section>
+      <section class="Section"></section>
+      <section class="Section"></section>
+    </main>
+    <script>
+      const sections = document.querySelectorAll(".Section")
+
+      window.addEventListener("scroll", () => {
+        animationByScroll()
+      })
+
+      function animationByScroll() {
+        const scrollY = window.scrollY
+        const windowHeight = window.innerHeight
+        const INVIEW_HEIGHT = 200
+
+        sections.forEach((section) => {
+          const offsetTop = section.offsetTop
+
+          if (scrollY + windowHeight > offsetTop + INVIEW_HEIGHT) {
+            section.classList.add("SectionIsActive")
+          }
+        })
+      }
+    </script>
+  </body>
+</html>

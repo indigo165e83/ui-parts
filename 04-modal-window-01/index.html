@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./resources/styles/destyle.css" />
+    <link rel="stylesheet" href="./resources/styles/style.css" />
+  </head>
+  <body>
+    <header class="Header">
+      <div class="Logo">
+        <a href="../index.html">
+          <img src="../resources/images/ui-parts-logo.png" width="150px" height="80px" alt="">
+        </a>
+      </div>
+      <div class="Title">
+        <h1>頻出UIパーツ</h1>
+      </div>
+    </header>
+    <div class="Modal">モーダルウィンドウです</div>
+    <div class="Overlay"></div>
+    <main class="Main">
+      <section class="Section">
+        <button class="Button">ボタン</button>
+      </section>
+      <section class="Section">
+        <button class="Button">ボタン</button>
+      </section>
+      <section class="Section">
+        <button class="Button">ボタン</button>
+      </section>
+      <section class="Section">
+        <button class="Button">ボタン</button>
+      </section>
+      <section class="Section">
+        <button class="Button">ボタン</button>
+      </section>
+      <section class="Section">
+        <button class="Button">ボタン</button>
+      </section>
+      <section class="Section">
+        <button class="Button">ボタン</button>
+      </section>
+    </main>
+    <script>
+      const body = document.body
+      const buttons = document.querySelectorAll(".Button")
+      const modal = document.querySelector(".Modal")
+      const overlay = document.querySelector(".Overlay")
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          toggleModal()
+        })
+      })
+
+      overlay.addEventListener("click", () => {
+        toggleModal()
+      })
+
+      function toggleModal() {
+        modal.classList.toggle("ModalIsOpen")
+        overlay.classList.toggle("OverlayIsOpen")
+        body.classList.toggle("IsScrollAllowed")
+      }
+    </script>
+  </body>
+</html>

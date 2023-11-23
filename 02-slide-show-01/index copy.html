@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./resources/styles/destyle.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./resources/styles/style.css" />
+  </head>
+  <body>
+    <header class="Header">
+      <div class="Logo">
+        <a href="../index.html">
+          <img src="../resources/images/ui-parts-logo.png" width="150px" height="80px" alt="">
+        </a>
+      </div>
+      <div class="Title">
+        <h1>頻出UIパーツ</h1>
+      </div>
+    </header>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="./resources/images/pc.png"
+            alt=""
+            class="swiper-slide-image"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="./resources/images/tab.png"
+            alt=""
+            class="swiper-slide-image"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="./resources/images/sp.png"
+            alt=""
+            class="swiper-slide-image"
+          />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev__origin">
+        <img
+          src="./resources/images/arrow-left.svg"
+          alt=""
+          class="swiper-button-prev-icon"
+        />
+      </div>
+      <div class="swiper-button-next__origin">
+        <img
+          src="./resources/images/arrow-right.svg"
+          alt=""
+          class="swiper-button-next-icon"
+        />
+      </div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next__origin",
+          prevEl: ".swiper-button-prev__origin",
+        },
+        spaceBetween: 20,
+        slidesPerView: 1.5,
+        centeredSlides: true,
+      })
+    </script>
+  </body>
+</html>

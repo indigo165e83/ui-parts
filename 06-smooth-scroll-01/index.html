@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./resources/styles/destyle.css" />
+    <link rel="stylesheet" href="./resources/styles/style.css" />
+  </head>
+  <body>
+    <header class="Header">
+      <div class="Logo">
+        <a href="../index.html">
+          <img src="../resources/images/ui-parts-logo.png" width="150px" height="80px" alt="">
+        </a>
+      </div>
+      <div class="Title">
+        <h1>頻出UIパーツ</h1>
+      </div>
+      <nav class="Navigation">
+        <ul class="Menu">
+          <li class="Menu-Item">
+            <a href="#Section1" class="Menu-Item-Link">セクション1</a>
+          </li>
+          <li class="Menu-Item">
+            <a href="#Section2" class="Menu-Item-Link">セクション2</a>
+          </li>
+          <li class="Menu-Item">
+            <a href="#Section3" class="Menu-Item-Link">セクション3</a>
+          </li>
+          <li class="Menu-Item">
+            <a href="#Section4" class="Menu-Item-Link">セクション4</a>
+          </li>
+          <li class="Menu-Item">
+            <a href="#Section5" class="Menu-Item-Link">セクション5</a>
+          </li>
+          <li class="Menu-Item">
+            <a href="#Section6" class="Menu-Item-Link">セクション6</a>
+          </li>
+          <li class="Menu-Item">
+            <a href="#Section7" class="Menu-Item-Link">セクション7</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="FirstView">ファーストビューです</section>
+    <main class="Main">
+      <section id="Section1" class="Section">セクション1</section>
+      <section id="Section2" class="Section">セクション2</section>
+      <section id="Section3" class="Section">セクション3</section>
+      <section id="Section4" class="Section">セクション4</section>
+      <section id="Section5" class="Section">セクション5</section>
+      <section id="Section6" class="Section">セクション6</section>
+      <section id="Section7" class="Section">セクション7</section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      const scroll = new SmoothScroll('a[href*="#"]', {
+        header: "[data-scroll-header]",
+      })
+    </script>
+  </body>
+</html>

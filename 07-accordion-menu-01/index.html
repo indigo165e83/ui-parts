@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./resources/styles/destyle.css" />
+    <link rel="stylesheet" href="./resources/styles/style.css" />
+  </head>
+  <body>
+    <header class="Header">
+      <div class="Logo">
+        <a href="../index.html">
+          <img src="../resources/images/ui-parts-logo.png" width="150px" height="80px" alt="">
+        </a>
+      </div>
+      <div class="Title">
+        <h1>頻出UIパーツ</h1>
+      </div>
+    </header>    
+    <nav class="AcordionMenu">
+      <ul class="Menu">
+        <li class="Menu-Item">
+          <span class="Menu-Item-Label" data-is-open="false">メニュー1</span>
+          <div class="Menu-Item__Inner">
+            <p class="Menu-Item-Content">
+              ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+            </p>
+          </div>
+        </li>
+        <li class="Menu-Item">
+          <span class="Menu-Item-Label" data-is-open="false">メニュー2</span>
+          <div class="Menu-Item__Inner">
+            <p class="Menu-Item-Content">
+              ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+            </p>
+          </div>
+        </li>
+        <li class="Menu-Item">
+          <span class="Menu-Item-Label" data-is-open="false">メニュー3</span>
+          <div class="Menu-Item__Inner">
+            <p class="Menu-Item-Content">
+              ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+            </p>
+          </div>
+        </li>
+        <li class="Menu-Item">
+          <span class="Menu-Item-Label" data-is-open="false">メニュー4</span>
+          <div class="Menu-Item__Inner">
+            <p class="Menu-Item-Content">
+              ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+            </p>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      const labels = document.querySelectorAll(".Menu-Item-Label")
+
+      labels.forEach((label) => {
+        label.addEventListener("click", function (event) {
+          const label = event.currentTarget
+          if (label.dataset.isOpen === "false") {
+            const itemInner = label.nextElementSibling
+            const content = itemInner.children[0]
+            const targetHeight = content.offsetHeight
+            itemInner.style.height = targetHeight + "px"
+
+            setTimeout(function () {
+              itemInner.style.height = "auto"
+              label.dataset.isOpen = true
+            }, 500)
+          }
+
+          if (label.dataset.isOpen === "true") {
+            const itemInner = label.nextElementSibling
+            const content = itemInner.children[0]
+            const targetHeight = content.offsetHeight
+            itemInner.style.height = targetHeight + "px"
+
+            setTimeout(function () {
+              itemInner.style.height = 0
+              label.dataset.isOpen = false
+            }, 1)
+          }
+        })
+      })
+    </script>
+  </body>
+</html>

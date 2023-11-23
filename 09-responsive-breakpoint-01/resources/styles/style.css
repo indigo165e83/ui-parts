@@ -1,0 +1,80 @@
+.Header {
+  width: 100%;
+  height: 60px;
+  background-color: #6ba6e7;
+  display: flex;
+  justify-content: space-between; /* LogoとTitleの間に空間を作り、Logoを左に、Titleを右に配置します */
+  align-items: center;
+}
+
+.Title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center; /* タイトルを中央揃えにします */
+  flex-grow: 1; /* タイトルが残りのスペースを占有できるようにします */
+}
+
+.Main {
+  width: 100%;
+  padding-top: 12px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+  background-color: #eee;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.Section {
+  margin-top: 20px;
+  margin-right: 40px;
+  width: 400px;
+  height: 300px;
+  padding: 0.5rem;
+  background-color: lightgreen;
+}
+@media screen and (min-width: 640px) {
+  .Section {
+    background-color: red;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Section {
+    background-color: pink;
+  }
+@media screen and (min-width: 1024px) {
+  .Section {
+    background-color: violet;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .Section {
+    background-color: blue;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .Section {
+    background-color: aqua;
+  }
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+li {
+  margin-top: 0.5rem;    /* 上側の余白を追加 */
+  margin-bottom: 0.5rem; /* 下側の余白を追加 */  
+}
+
+p{
+  margin: 10px;
+}
